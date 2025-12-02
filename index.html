@@ -944,11 +944,11 @@
         <div class="grid">
           <!-- Gallery Card -->
           <div class="card" id="cardGallery">
-            <h3>💝 Our Moments</h3>
-            <p>Every photo tells a story of us — click to relive those precious times.</p>
+            <h3>💝 Our First Photo</h3>
+            <p>Every photo tells a story of us — but it starts with the first.</p>
             <div class="thumbs" id="thumbs"></div>
             <div class="actions">
-              <button class="btn" id="openGallery">View Gallery</button>
+              <button class="btn" id="openGallery">View Photo</button>
             </div>
           </div>
 
@@ -1126,50 +1126,7 @@ Forever yours,
     alt: 'Our First Date',
     caption: 'Our First Date - Coffee Shop ☕'
   },
-  {
-    id: 1,
-    src: 'images/photo2.jpg',
-    alt: 'Beach Day',
-    caption: 'Beach Day Together 🌊'
-  },
-  {
-    id: 2,
-    src: 'images/photo1.jpg',
-    alt: 'Birthday Celebration',
-    caption: 'Your Birthday Surprise 🎂'
-  },
-  {
-    id: 3,
-    src: 'images/photo1.jpg',
-    alt: 'Sunset View',
-    caption: 'Watching Sunsets Together 🌅'
-  },
-  {
-    id: 4,
-    src: 'images/photo1.jpg',
-    alt: 'Cooking Together',
-    caption: 'Our Kitchen Adventures 🍳'
-  },
-  {
-    id: 5,
-    src: 'images/photo1.jpg',
-    alt: 'Road Trip',
-    caption: 'Road Trip Memories 🚗'
-  },
-  {
-    id: 6,
-    src: 'images/photo1.jpg',
-    alt: 'Park Picnic',
-    caption: 'Picnic in the Park 🧺'
-  },
-  {
-    id: 7,
-    src: 'images/photo1.jpg',
-    alt: 'Movie Night',
-    caption: 'Cozy Movie Nights 🎬'
-  }
 ];
-
     const TIMELINE_EVENTS = [
       {date: '2020-02-14', title: 'Our First Date ☕', note: 'We talked for hours and lost track of time'},
       {date: '2021-06-15', title: 'Beach Adventure 🌊', note: 'Sandy toes, salty kisses, endless laughter'},
@@ -1285,22 +1242,7 @@ Forever yours,
     }
 
     // ==================== GALLERY FUNCTIONS ====================
-    function initGallery() {
-      IMAGES.forEach(img => {
-        const thumbDiv = document.createElement('div');
-        thumbDiv.className = 'thumb';
-        thumbDiv.title = img.caption;
-        
-        const imgEl = document.createElement('img');
-        imgEl.src = img.src;
-        imgEl.alt = img.alt;
-        
-        thumbDiv.appendChild(imgEl);
-        thumbDiv.addEventListener('click', () => openLightbox(img));
-        
-        elements.thumbs.appendChild(thumbDiv);
-      });
-    }
+    
 
     function openLightbox(img) {
       elements.lightImg.src = img.src;
